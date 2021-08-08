@@ -14,4 +14,28 @@ To complete the analysis, three data frames are provided that includes informati
 Our analysis finds that the trend of price per square foot does not increase at the same rate as rental prices. A good opportunity for investors would be to look for markets with steady/decreasing price per square foot and buy these homes, while rental prices continue to increase. This is  a good investment opportunity because we do not see rental prices decreases in the data set provided.
 
 **Housing unit increases**
-![]('Starter_code\Images\zoomed-housing-units-by-year.png')
+
+![](https://github.com/bademola/Challenge6/blob/main/Starter_Code/Images/zoomed-housing-units-by-year.png)
+
+**Anza Vista can be a potential investment!**
+
+![](https://github.com/bademola/Challenge6/blob/main/Starter_Code/Images/pricing-info-by-neighborhood.png)
+
+
+**Running the code below will give you an interactive code block**
+
+`map_plot = px.scatter_mapbox(
+    all_neighborhoods_df,
+    lat= 'Lat',
+    lon= 'Lon',
+    size= 'sale_price_sqr_foot',
+    color= 'gross_rent',
+    zoom=11,
+    size_max = 25,
+    hover_name = 'Neighborhood'
+)`
+
+
+### If all imports are properly ran, an image similar to the below will render
+
+![](https://github.com/bademola/Challenge6/blob/main/Starter_Code/Images/mapbox-plot.png)
